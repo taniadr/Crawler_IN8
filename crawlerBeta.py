@@ -3,6 +3,7 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import pandas as pd
+import json
 
 webdriver = './chromedriver'
 driver = Chrome(webdriver)

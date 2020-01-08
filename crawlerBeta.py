@@ -12,6 +12,7 @@ timeout = 12
 items = driver.find_elements_by_class_name('feed-post')
 total = []
 count = 0
+news = []
 
 for item in items:
     if count == 3:
@@ -23,5 +24,13 @@ for item in items:
     df = pd.DataFrame(total,columns=['quote_text','link'])
     count = count+1
     df.to_csv('feed.csv')
-
+    
+    news.append({
+        'postLink' : link,
+        'postBody' : quote_text
+        })
+   
 driver.close()
+
+with open('data.txt', 'w') as outfile:
+    json.dump(news, outfile)

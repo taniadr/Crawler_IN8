@@ -1,16 +1,15 @@
 #FirstVersion - Modifications needed!!!!#
-#- fix runtime error#
-#save to JSON, add image and rename tags#
+#save to JSON instead of CSV (utf-8), add image#
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 import pandas as pd
 
-webdriver = "./chromedriver"
+webdriver = './chromedriver'
 driver = Chrome(webdriver)
-url = "https://g1.globo.com/"
+url = 'https://g1.globo.com/'
 driver.get(url)
 timeout = 12
-items = driver.find_elements_by_class_name("feed-post")
+items = driver.find_elements_by_class_name('feed-post')
 total = []
 count = 0
 

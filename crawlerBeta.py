@@ -9,24 +9,25 @@ webdriver = "./chromedriver"
 
 driver = Chrome(webdriver)
 
-pages = 3
+url = "https://g1.globo.com/"
 
-for page in range(1,pages):
-    
-    url = "https://g1.globo.com/"
+driver.get(url)
 
-    driver.get(url)
+items = driver.find_elements_by_class_name("feed-post")
 
-    items = len(driver.find_elements_by_class_name("feed-post"))
-
-    total = []
-    for item in range(1,3):
-        quotes = driver.find_elements_by_class_name("feed-post")
-        for quote in quotes:
-            quote_text = quote.find_element_by_class_name('feed-post-link').text[1:-2]
-            author = quote.find_element_by_class_name('feed-post-body').text
-            new = ((quote_text,author))
-            total.append(new)
-    df = pd.DataFrame(total,columns=['feed-post-link','feed-post-body'])
-    df.to_csv('feed.csv')
+total = []
+count = 0
+for item in range(1,items):
+    if count == 3:
+        break
+        
+    quotes = driver.find_elements_by_class_name("feed-post")
+    for quote in quotes:
+        quote_text = quote.find_element_by_class_name('feed-post-link').text[1:-2]
+        author = quote.find_element_by_class_name('feed-post-body').text
+        new = ((quote_text,author))
+        total.append(new)
+df = pd.DataFrame(total,columns=['feed-post-link','feed-post-body'])
+count = count+1
+df.to_csv('feed.csv')
 driver.close()

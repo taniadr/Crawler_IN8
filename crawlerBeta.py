@@ -19,15 +19,14 @@ total = []
 count = 0
 for item in range(1,items):
     if count == 3:
-        break
-        
+        break        
     quotes = driver.find_elements_by_class_name("feed-post")
     for quote in quotes:
-        quote_text = quote.find_element_by_class_name('feed-post-link').text[1:-2]
-        author = quote.find_element_by_class_name('feed-post-body').text
-        new = ((quote_text,author))
+        quote_text = quote.find_element_by_class_name('feed-post-body').text
+        link = quote.find_element_by_class_name('feed-post-link').text
+        new = ((quote_text,link))
         total.append(new)
-df = pd.DataFrame(total,columns=['feed-post-link','feed-post-body'])
-count = count+1
-df.to_csv('feed.csv')
+    df = pd.DataFrame(total,columns=['feed-post-link','feed-post-body'])
+    count = count+1
+    df.to_csv('feed.csv')
 driver.close()

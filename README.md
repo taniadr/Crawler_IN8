@@ -1,8 +1,8 @@
-# Crawler_IN8
+# Crawler_IN8 #
 
-#In order to run, please clone the whole repository #
-#in your machine and execute the only file inside the folder#
-#It uses Chrome as Browser
+In order to run, please clone the whole repository 
+in your machine and execute the only file inside the folder
+It uses Chrome as Browser
 
 ####################################################################
 This Crawler was made thanks to the following Tutorials: 

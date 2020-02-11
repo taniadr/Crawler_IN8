@@ -24,7 +24,7 @@ def getNews():
     soup = BeautifulSoup(r.content, 'lxml')
     print 'Dadas as cartas'
 
-    for a in soup.findAll('a', attrs={'class': 'feed-post'}):
+    for a in soup.findAll('a', attrs={'class': 'bstn-hl-wrapper'}):
         print 'Primeira rodada'
         links.append((a.text, a.get('href')))
         if self.item_count > 3:

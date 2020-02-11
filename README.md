@@ -8,7 +8,7 @@ New Crawler is under construction.
 
 *env\Scripts\activate*
 
-2 ---------------- RUNNING and TESTING 
+2 ---------------- RUNNING and TESTING [**Nova versão saindo esta semana**]
 
 *python .\crawlerAlfa.py*
  

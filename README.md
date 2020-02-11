@@ -1,3 +1,5 @@
+**version only using scrapy -> https://github.com/taniadr/NewScrapper ** 
+
 # Crawler_IN8'
 
 New Crawler is under construction.

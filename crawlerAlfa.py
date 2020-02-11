@@ -22,10 +22,10 @@ def getNews():
         return None
  
     soup = BeautifulSoup(r.content, 'lxml')
-    print 'Dadas as cartas'
+    print 'Out of the loop'
 
     for a in soup.findAll('a', attrs={'class': 'bstn-hl-wrapper'}):
-        print 'Primeira rodada'
+        print 'future for to get main nodes'
         links.append((a.text, a.get('href')))
         if self.item_count > 3:
             print 'Truco'
@@ -33,7 +33,7 @@ def getNews():
         print 'Seis'
     
     if len(links) == 0:
-        print ('Sem final feliz aqui')
+        print ('Tag errada')
 
     return links
     

@@ -1,4 +1,4 @@
-**version only using scrapy -> https://github.com/taniadr/NewScrapper ** 
+**version using scrapy -> https://github.com/taniadr/NewScrapper ** 
 
 # Crawler_IN8'
 

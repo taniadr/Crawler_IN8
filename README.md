@@ -10,8 +10,8 @@ New Crawler is under construction.
 
 *env\Scripts\activate*
 
-2 ---------------- RUNNING and TESTING [**Nova versão saindo esta semana**]
+2 ---------------- RUNNING and TESTING [**Nova versão : https://github.com/taniadr/NewScrapper]**
 
-*python .\crawlerAlfa.py*
+*python .\app.py.py*
  
 The output will be in a file called **itens.json** , if everything went right.
